@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../0_google"
+		},
+		{
+			"path": "../../1_programming_language"
+		},
+		{
+			"path": "../../2_funktionen_module"
+		},
+		{
+			"path": "../../3_Data_Science_Datenbanken,_SQL_und _NoSQL"
+		}
+	]
+}

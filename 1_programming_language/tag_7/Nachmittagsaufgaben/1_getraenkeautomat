@@ -1,0 +1,81 @@
+Einzelaufgabe
+
+Der Getränkeautomat
+
+Gegeben ist ein Getränkeautomat, der drei verschiedene Marken von Getränken führt:
+(1) Coca Cola, (2) Pepsi Cola und (3) Sprite.
+Der Getränkeautomat nimmt ausschließlich Münzgeld an. Erlaubte Geldstücke sind 1 Euro, 50 Cent und 2 Euro.
+Repräsentiert werden diese Münzen durch 100, 50 und 200, also den Cent-Beträgen der Münzen.
+
+Preisliste der Getränke:
+(1) CocaCola: 1.50 Euro (150 Cent)
+(2) Pepsi Cola: 2 Euro (200 Cent)
+(3) Sprite: 2 Euro (200 Cent)
+
+Aufgabe:
+Es soll ein Automat als Python-Skript entwickelt werden. (a) Durch eine Eingabeaufforderungen wählt der User ein Getränk.
+Der Automat zeigt (b) dem User den Preis der Ware in EUR (z.b 1.50 EUR) und durch (c) eine weitere Eingabe-Aufforderung übergibt der User dem Automat die passenden Geldstücke (100 = 1 Euro, 200 = 2 Euro, oder 50 = 50 Cent).
+Der Übergabewert der Münzen soll ein kommaseparierter String sein zb. 100,50,50
+(d) Der Prozess (Auswahl Getränk, übergebene Münzmenge, Münzwerte, Wechselgeld) soll in einem Log-String dokumentiert werden. Dieser String wird bei Programmende ausgegeben.
+(e) es wird das Wechselgeld berechnet
+Fehlerbehandlung ist an dieser Stelle nicht notwendig
+
+Beispiel:
+"Bitte wählen Sie Ihr Getränk:"
+1
+"Sie haben Cola gewählt. Der Preis für Cola ist 1.50. Bitte werfen Sie das Geld ein!"
+50,50
+"Tut mir leid, das war leider zu wenig. Ihr Wechselgeld beträgt 1,00 Euro"
+
+Log:
+"drink:1 - input_value: 100 - change: 100 - coins: 2 - ERROR"
+-----------------------------------------------------------------------------------------------------------
+Beispiel:
+"Bitte wählen Sie Ihr Getränk:"
+1
+"Sie haben Cola gewählt. Der Preis für Cola ist 1.50. Bitte werfen Sie das Geld ein!"
+
+50, 50,100
+"Danke für Ihre Eingabe. Sie erhalten 0,50 Euro Wechselgeld".
+"Bitte entnehmen Sie Ihr Getränk"
+
+Log:
+"drink:1 - input_value: 200 - change: 50 - coins: 3 - OK"
+-----
+
+
+
+
+
+
+
+
+
+
+Zusatzaufgabe 
+Problem: Automat ist defekt
+- er kann maximal 3 Münzen pro Kauf annehmen, überschüssige Münzen (d.h. > 3) verschluckt er der
+ Einwurf-Reihenfolge nach, unabhängig von deren Wert
+- mit einer Wahrscheinlichkeit von 50% wertet er 1-Euro-Münzen in der späteren Berechnung nicht (Wert 0 statt 100) (random – Modul, entsprechende Funktion suchen)
+- Falsche Münzen (zb. 20 oder 10 Cent) nimmt er zwar stillschweigend an, berücksichtigt sie aber nicht in der Berechnung und gibt sie auch nicht zurück
+
+Beispiele:
+---------------------------------------------------------------------------
+Bei Auswahl Pepsi (drink2) (=2 EUR) und Münz-String 50,50,50,50 ist das Ergebnis:
+
+Sorry, der eingeworfene Betrag von 1.5 EUR ist nicht ausreichend
+Wechselgeld: 1.5
+Warum? Münzen größer 3 werden nicht gewertet
+---------------------------------------------------------------------------
+Bei Auswahl Coke (drink1) (=1.50 EUR) und Münz-String 100,50,200 ist das Ergebnis:
+
+Bitte Coca Cola aus dem Automat entnehmen!
+Wechselgeld: 1.0 EUR
+=> im Falle, dass die 100 (=1euro) vom Automaten nicht berücksichtig wurden
+
+    oder
+
+Bitte Coca Cola aus dem Automat entnehmen!
+Wechselgeld: 2.0 EUR
+=> im Falle, dass die 100 vom Automat erkannt und gerechnet wurden
+---------------------------------------------------------------------------

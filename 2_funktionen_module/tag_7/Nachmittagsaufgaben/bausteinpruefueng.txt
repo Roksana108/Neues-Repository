@@ -1,0 +1,61 @@
+FUNKTIONEN
+-----------
+Parameter, Argumente
+lokaler, globaler Scope
+Return-Statement
+Seiten-Effekte
+Shadowing
+args und kwargs (*args, **kwargs)
+default-Parameter (def (x, y=10))
+Global-Keyword
+Funktionsreferenzen / Funktionsobjekt
+Rekursion, Call-Stack
+
+TYPE HINTS
+------------
+allgemein
+
+
+VIRTUELLE UMGEBUNGEN
+---------------------
+allgemein
+venv (Tool)
+activate und deactivate
+
+
+LAMBDA EXPRESSIONS
+--------------------
+Immediately Invoked Function Expression
+Lambda Expressions Allgemein
+
+
+GENERATOREN / ITERATOREN
+-------------------------
+Generator-Funktionen (yield)
+Generator-Expressions (x for x in [1, 2, 3])
+
+
+Doc-String / Annotations
+----------------------
+Doc-String, fn.__doc__
+Allgemein, was ist ein Doc-String?
+fn.__annotations__
+
+RANDOM
+------------
+randint, choice, ...
+seed
+
+
+PIP
+-----------------------
+Was ist PIP?
+pip install
+pip freeze
+
+
+MISC
+-----------------------
+functools.reduce
+sys.executable
+filter, map

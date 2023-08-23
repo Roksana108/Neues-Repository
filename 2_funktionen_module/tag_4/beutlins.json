@@ -1,0 +1,23 @@
+[
+    {
+        "bilbo": {
+            "name": "Bilbo Beutlin",
+            "age": 133
+        },
+        "frodo": {
+            "name": "Frodo Beutlin",
+            "age": 67,
+            "friends": [
+                "Sam",
+                "Merry",
+                "Pippin"
+            ]
+        }
+    },
+    {
+        "gollum": {
+            "name": "gollum",
+            "age": 2000
+        }
+    }
+]

@@ -1,0 +1,25 @@
+""" 
+Complex Numbers in Python
+Datentyp complex
+
+math.sqrt(-2)
+cmath ist math für komplexe Zahlen
+"""
+import math
+import cmath 
+
+# math.sqrt(-2)
+result = cmath.sqrt(-2)
+print(result)
+
+z = 3 + 2j
+print(f"Realteil von z: {z.real}")
+print(f"Imaginärteil von z: {z.imag}")
+print(f"abs:", abs(z))
+print("Polarkoodrdinaten:", cmath.polar(z))
+
+a = complex(4, 2)
+b = complex(3, 2)
+c = a + b
+print("a + b:", c)
+a == b 
